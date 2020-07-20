@@ -1,0 +1,343 @@
+.direction{
+    width: 100%;
+    background: #efefef;
+    margin-top: 10%;
+    margin: 400 auto;
+    overflow: hidden;
+   
+}
+
+.direction .tit img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+
+.direction li{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.direction .screen_bx img{
+    width: 54%;
+    float: left;
+/*    border: 1px solid black;*/
+   
+}
+
+
+
+/*호캉스*/
+.direction .screen_bx li:nth-child(1) img{
+    margin-top: 20%;
+    margin-left: -5%;
+    animation-name: fadeOut, fadeInUp;
+    animation-duration: 6s;
+
+}
+
+
+/*초특가, 무한대실*/
+.direction .screen_bx li:nth-child(2) img{
+    margin-top: 5%;
+    margin-right: -5%;
+    padding-left: 1%;
+    animation-name: fadeOut, fadeInUp;
+    animation-duration: 4s;
+    
+ 
+ 
+}
+
+/*늦캉스,화이트데이*/
+.direction .screen_bx li:nth-child(3) img{
+    clear: both;
+    margin-top: -12%;
+    margin-left: -5%;
+    padding-bottom: 15%;
+    animation-name: fadeOut, fadeInUp;
+    animation-duration: 10s;
+ 
+   
+ 
+}
+
+/*text*/
+.direction .screen_bx li:nth-child(4) img{
+    width: 40%;
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    animation-name: fadeOut, fadeInUp;
+    animation-duration: 10s;
+
+
+}
+
+
+
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(65px);
+    transform: translateY(65px);
+  }
+    
+
+  50% {
+    opacity: 0.2;
+    -webkit-transform: translateY(65px);
+    -ms-transform: translateY(65px);
+    transform: translateY(65px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+    
+
+  50% {
+    opacity: 0.2;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+ 
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+
+
+
+
+
+
+@-webkit-keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+    
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }  
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+    
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }  
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+.fadeInUp2 {
+  -webkit-animation-name: fadeInUp2;
+  animation-name: fadeInUp2;
+}
+
+
+
+
+
+
+
+@-webkit-keyframes fadeInUp3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(75px);
+    transform: translateY(75px);
+  }
+    
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(75px);
+    transform: translateY(75px);
+  }  
+    
+  75% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  } 
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeInUp3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+    
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  } 
+    
+  75% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  } 
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+.fadeInUp3 {
+  -webkit-animation-name: fadeInUp3;
+  animation-name: fadeInUp3;
+}
+
+
+
+
+@-webkit-keyframes fadeInUp4 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(75px);
+    transform: translateY(75px);
+  }
+    
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(75px);
+    transform: translateY(75px);
+  }  
+    
+  90% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  } 
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeInUp4 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+    
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  } 
+    
+  90% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  } 
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+.fadeInUp4 {
+  -webkit-animation-name: fadeInUp3;
+  animation-name: fadeInUp3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

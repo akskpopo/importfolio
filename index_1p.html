@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        .dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+    </style>
+    <style>
+        .gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+    </style>
+    <style>
+        .gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+    </style>
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
+    <style>
+        .gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+    </style>
+    <style>
+        .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+    </style>
+    <style>
+        @media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
+    </style>
+    <style>
+        .gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+    </style>
+    <style>
+        .gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}
+    </style>
+    
+	<!--구글애널리스틱-->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+	<script src="http://cr.acecounter.com/Web/AceCounter_AW.js?gc=AH2A43490577012&amp;py=0&amp;gd=gtp13&amp;gp=8080&amp;up=NaPm_Ncisy&amp;rd=1577703400431"></script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-145532899-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-145532899-1');
+	</script>
+	
+	<!--//구글애널리스틱-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>임.포트 IMPORT</title>
+	<meta name="description" content="We Are Creative">
+	<meta name="keywords" content="웹에이전시, UI/UX, 홈페이지제작, 쇼핑몰제작, 워드프레스, 온라인마케팅, 광고">
+	<meta name="author" content="임.포트 IMPORT">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#ffe618">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="임.포트 IMPORT">
+	<meta property="og:url" content="http://importfolio.kr/">
+	<meta property="og:site_name" content="임.포트 IMPORT">
+	<meta property="og:description" content="We Are Creative">
+	<meta property="og:image" content="./css/favicon_400x210.png">
+<!--
+	<meta name="twitter:url" content="http://importfolio.kr/">
+	<meta name="twitter:description" content="We Are Creative">
+	<meta name="twitter:image" content="./css/favicon_270x270.png">
+-->
+	<link rel="shortcut icon" href="./css/favicon.ico">
+	<link rel="icon" href="./css/favicon.png">
+	<link rel="apple-touch-icon" href="./css/favicon.png">
+	<link rel="stylesheet" href="./css/init.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/owl.theme.default.css">
+	<script src="./js/html.js"></script>
+	<script src="./js/jquery-1.11.0.min.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/jquery.easing.1.3.min.js"></script>
+	<script src="./js/jquery.appear.js"></script>
+
+	<!--네이버 전환스크립트-->
+	<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"> </script>
+	<script type="text/javascript">
+	if (!wcs_add) var wcs_add={};
+	wcs_add["wa"] = "s_4af5fa3f2cb";
+	if (!_nasa) var _nasa={};
+	wcs.inflow();
+	wcs_do(_nasa);
+	</script>
+	<!--//네이버 전환스크립트-->
+
+	<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/5/intl/ko_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/5/intl/ko_ALL/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/5/intl/ko_ALL/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/5/intl/ko_ALL/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/5/intl/ko_ALL/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d37.544529956837174&amp;2d126.9033787395557&amp;2m2&amp;1d37.55929607790468&amp;2d126.92957669628834&amp;2u16&amp;4sko-KR&amp;5e0&amp;6sm%40496000000&amp;7b0&amp;8e0&amp;callback=_xdc_._umex20&amp;key=AIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;token=44618"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i16!2i55871!3i25381!1m4!1m3!1i16!2i55871!3i25382!1m4!1m3!1i16!2i55872!3i25381!1m4!1m3!1i16!2i55873!3i25381!1m4!1m3!1i16!2i55872!3i25382!1m4!1m3!1i16!2i55873!3i25382!2m3!1e0!2sm!3i496208166!3m12!2sko-KR!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e3!12m1!5b1&amp;callback=_xdc_._bv52xq&amp;key=AIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;token=6665"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/5/intl/ko_ALL/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Fwww.newbird.co.kr%2Fportfolio%2F%23!&amp;4sAIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;callback=_xdc_._kv1t10&amp;key=AIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;token=77510"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttp%3A%2F%2Fwww.newbird.co.kr%2Fportfolio%2F%23!&amp;3sAIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;7ssbvd9z&amp;10e1&amp;callback=_xdc_._nf5lzl&amp;key=AIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;token=28703"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i16!2i55871!3i25381!1m4!1m3!1i16!2i55871!3i25382!1m4!1m3!1i16!2i55872!3i25381!1m4!1m3!1i16!2i55873!3i25381!1m4!1m3!1i16!2i55872!3i25382!1m4!1m3!1i16!2i55873!3i25382!2m3!1e0!2sm!3i496208166!3m17!2sko-KR!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e3!12m1!5b1&amp;callback=_xdc_._eo65dl&amp;key=AIzaSyC7Xp8h4aoIJqisIJdggs6TDsB1JW3k6-A&amp;token=7412"></script></head>
+	
+	
+	<body>
+
+
+<div id="wrap" class="sub">
+	<!-- Header S -->
+    <header id="header">
+		<div class="h_logo">
+			<a href="./index.html" title="Go to Home">
+				<i class="hl_i"></i><i class="hl_m"></i><i class="hl_p"></i><i class="hl_o"></i><i class="hl_r"></i><i class="hl_t"></i><i class="hl_bar"></i>
+				<h1 class="blind">IMPORT</h1>
+			</a>
+		</div>
+		<hr>
+		<nav class="h_gnb">
+			<h2 class="blind">GNB</h2>
+			<i class="hg_icon"></i>
+			<button type="button" class="hg_btn"><span class="blind">Menu Button</span></button>
+			<div class="hg_wrap">
+				<ul>
+					
+					<li>
+						<a href="#profile"><span>임포트 소개</span></a>
+					</li>
+					
+					<li>
+						<a href="./index.html" class="on"><span>포트폴리오</span></a>
+					</li>
+					<li>
+						<a href="http://www.youtube.com"><span>유튜브</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header E -->
+	<hr>
+	<!-- Contents S -->
+	<div id="contents">
+       <section class="c_portfolio">
+          <div class="wrap">
+                <div class="c_title">
+					<h2 class="ct_m">PORTFOLIO</h2>
+				</div>
+                <div id="page" class="c_wrap box">
+     <!--name--><h3 class="title t1 bold bar s1"><mark>PORTFOLIO</mark></h3>
+     <!--nav--> <div class="tab div5">
+					<ul>
+							<li><a href="#!" id="a_all" onclick="get_portfolio('all')" class="cp_a on">ALL</a></li>
+							<li><a href="#!" id="a_homepage" onclick="get_portfolio('homepage')" class="cp_a">HOMEPAGE</a></li>
+							<li><a href="#!" id="a_onlinebanner" onclick="get_portfolio('onlinebanner')" class="cp_a">ONLINE BANNER</a></li>
+							<li><a href="#!" id="a_media" onclick="get_portfolio('media')" class="cp_a">MEDIA</a></li>
+							<li><a href="#!" id="a_edit" onclick="get_portfolio('edit')" class="cp_a">EDIT</a></li>
+				    </ul>
+				</div>
+<!--
+     tag <div class="sort">
+						<form id="portfolio_sort" action="#!">
+							<fieldset>
+								<legend>정렬 세부옵션</legend>
+								<ul>
+									<li><input type="checkbox" id="ps_랜딩페이지" class="cls_keyword" value="37" name="ps_item[]"><label for="ps_랜딩페이지"><span>랜딩페이지</span></label></li>
+									<li><input type="checkbox" id="ps_커뮤니티" class="cls_keyword" value="29" name="ps_item[]"><label for="ps_커뮤니티"><span>커뮤니티</span></label></li>
+									<li><input type="checkbox" id="ps_제약" class="cls_keyword" value="21" name="ps_item[]"><label for="ps_제약"><span>제약</span></label></li>
+									<li><input type="checkbox" id="ps_스트리밍" class="cls_keyword" value="18" name="ps_item[]"><label for="ps_스트리밍"><span>스트리밍</span></label></li>
+									<li><input type="checkbox" id="ps_플랫폼" class="cls_keyword" value="17" name="ps_item[]"><label for="ps_플랫폼"><span>플랫폼</span></label></li>
+									<li><input type="checkbox" id="ps_3D솔루션" class="cls_keyword" value="16" name="ps_item[]"><label for="ps_3D솔루션"><span>3D솔루션</span></label></li>
+									<li><input type="checkbox" id="ps_미디어 데이터" class="cls_keyword" value="12" name="ps_item[]"><label for="ps_미디어 데이터"><span>미디어 데이터</span></label></li>
+									<li><input type="checkbox" id="ps_예약시스템" class="cls_keyword" value="28" name="ps_item[]"><label for="ps_예약시스템"><span>예약시스템</span></label></li>
+									<li><input type="checkbox" id="ps_워드프레스" class="cls_keyword" value="8" name="ps_item[]"><label for="ps_워드프레스"><span>워드프레스</span></label></li>
+									<li><input type="checkbox" id="ps_네트워크보안" class="cls_keyword" value="9" name="ps_item[]"><label for="ps_네트워크보안"><span>네트워크보안</span></label></li>
+									<li><input type="checkbox" id="ps_반응형웹" class="cls_keyword" value="7" name="ps_item[]"><label for="ps_반응형웹"><span>반응형웹</span></label></li>
+									<li><input type="checkbox" id="ps_주식" class="cls_keyword" value="25" name="ps_item[]"><label for="ps_주식"><span>주식</span></label></li>
+									<li><input type="checkbox" id="ps_클리닉" class="cls_keyword" value="34" name="ps_item[]"><label for="ps_클리닉"><span>클리닉</span></label></li>
+									<li><input type="checkbox" id="ps_바이오" class="cls_keyword" value="33" name="ps_item[]"><label for="ps_바이오"><span>바이오</span></label></li>
+									<li><input type="checkbox" id="ps_에이전시" class="cls_keyword" value="10" name="ps_item[]"><label for="ps_에이전시"><span>에이전시</span></label></li>
+									<li><input type="checkbox" id="ps_협회" class="cls_keyword" value="15" name="ps_item[]"><label for="ps_협회"><span>협회</span></label></li>
+									<li><input type="checkbox" id="ps_전문학교" class="cls_keyword" value="14" name="ps_item[]"><label for="ps_전문학교"><span>전문학교</span></label></li>
+									<li><input type="checkbox" id="ps_엔터테인먼트" class="cls_keyword" value="13" name="ps_item[]"><label for="ps_엔터테인먼트"><span>엔터테인먼트</span></label></li>
+									<li><input type="checkbox" id="ps_공공기관" class="cls_keyword" value="11" name="ps_item[]"><label for="ps_공공기관"><span>공공기관</span></label></li>
+									<li><input type="checkbox" id="ps_조명" class="cls_keyword" value="32" name="ps_item[]"><label for="ps_조명"><span>조명</span></label></li>
+									<li><input type="checkbox" id="ps_잡화" class="cls_keyword" value="31" name="ps_item[]"><label for="ps_잡화"><span>잡화</span></label></li>
+									<li><input type="checkbox" id="ps_침구" class="cls_keyword" value="30" name="ps_item[]"><label for="ps_침구"><span>침구</span></label></li>
+									<li><input type="checkbox" id="ps_코인" class="cls_keyword" value="27" name="ps_item[]"><label for="ps_코인"><span>코인</span></label></li>
+									<li><input type="checkbox" id="ps_광고" class="cls_keyword" value="26" name="ps_item[]"><label for="ps_광고"><span>광고</span></label></li>
+									<li><input type="checkbox" id="ps_인테리어" class="cls_keyword" value="24" name="ps_item[]"><label for="ps_인테리어"><span>인테리어</span></label></li>
+									<li><input type="checkbox" id="ps_코스메틱" class="cls_keyword" value="23" name="ps_item[]"><label for="ps_코스메틱"><span>코스메틱</span></label></li>
+									<li><input type="checkbox" id="ps_패션" class="cls_keyword" value="22" name="ps_item[]"><label for="ps_패션"><span>패션</span></label></li>
+									<li><input type="checkbox" id="ps_교육" class="cls_keyword" value="20" name="ps_item[]"><label for="ps_교육"><span>교육</span></label></li>
+									<li><input type="checkbox" id="ps_식품" class="cls_keyword" value="19" name="ps_item[]"><label for="ps_식품"><span>식품</span></label></li>
+									<li><input type="checkbox" id="ps_애니메이션" class="cls_keyword" value="35" name="ps_item[]"><label for="ps_애니메이션"><span>애니메이션</span></label></li>
+									<li><input type="checkbox" id="ps_기타" class="cls_keyword" value="38" name="ps_item[]"><label for="ps_기타"><span>기타</span></label></li>
+								</ul>
+							</fieldset>
+						</form>
+					</div>
+-->
+<!--contents1--><div id="section1" class="cp_list">
+					    
+				 <ul id="cp_ul">
+				    <li>
+				        <div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>마켓민트</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>마켓민트</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>이벤트, 기획전</span>
+									</li>
+								</ul>
+							</div>
+							<div id="mint" class="cpl_pic" style="background-image:url(./images/date/margetmint/1_TNK_hor.jpg);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=1.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>YANOLJA</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>야놀자</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>온라인 광고 배너</span>
+									</li>
+								</ul>
+							</div>
+							<div class="cpl_pic" style="background-image:url('./images/date/ya/bg.png');">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=2.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>캡스홈</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>ADT캡스</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>비딩, Google Web Designer</span>
+									</li>
+								</ul>
+							</div>
+							<div class="cpl_pic" style="background-image:url(./images/date/caps/video_4.jpg);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=3.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>OK저축은행</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+                                        <span>OK저축은행</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>랜딩페이지</span>
+									</li>
+									<li>
+										<strong><mark>URL</mark></strong>
+									<span><a href="https://www.oksavingsbank.com/landing/okH0123L27/okH0123L27.html?utm_source=naver&utm_medium=cpc&utm_campaign=lp27_pc&utm_content=%EC%A3%BC%EB%B6%80%EB%9E%9C%EB%94%A9_%EC%A3%BC%EB%B6%80%EB%8C%80%EC%B6%9C1&utm_term=OK%EC%A0%80%EC%B6%95%EC%9D%80%ED%96%89%EC%A3%BC%EB%B6%80OK%EB%A1%A0" target="_blank">oksavingsbank.com</a></span>
+									</li>
+								</ul>
+							</div>
+							<div id="bank" class="cpl_pic" style="background-image:url(./images/date/ok/mom_landingpage_pc.jpg);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=4.html">
+									<span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>제주지니</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>제주은행</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>이벤트, 기획전</span>
+									</li>
+								</ul>
+							</div>
+							<div id="jini" class="cpl_pic" style="background-image:url(./images/date/jeju/event_landing.jpg);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=5.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>SPEAKINGDOM</strong>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>스피킹맥스</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>비딩, Google Web Designer</span>
+									</li>
+								</ul>
+							</div>
+				        <div class="cpl_pic" style="background-image:url(./images/date/speakingdom/review.jpg);">
+				            <div class="cplp_info">
+								<a href="./portfolio/view.html.idx=6.html"><span class="blind">MORE</span></a>
+								<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>HENDRICK'S</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>JIN TONIC</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>일러스트, html5/css3</span>
+									</li>
+									<li>
+										<strong><mark>URL</mark></strong>
+									    <span><a href="http://none" target="_blank">none</a></span>
+									</li>
+								</ul>
+							</div>
+							<div class="cpl_pic" style="background-image:url(./images/date/hendricks/top.png);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=7.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>FLOWER</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>졸업전시</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>Infographic</span>
+									</li>
+								</ul>
+							</div>
+							<div class="cpl_pic" style="background-image:url(./images/date/flower/ECOSYSTEM.jpg);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=8.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>H 패션몰</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>현대</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>비딩, 이벤트 배너</span>
+									</li>
+								</ul>
+							</div>
+							<div class="cpl_pic" style="background-image:url(./images/date/h_fashionmall/logo.png);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=9.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cpl_wrap">
+							<div class="cpl_info">
+								<div class="cpli_title">
+									<strong>노랑풍선</strong>
+									<span></span>
+								</div>
+								<ul>
+									<li>
+										<strong><mark>CLIENT</mark></strong>
+										<span>노랑풍선</span>
+									</li>
+									<li>
+										<strong><mark>WORK</mark></strong>
+										<span>온라인 광고 배너</span>
+									</li>
+								</ul>
+							</div>
+							<div id="bllm" class="cpl_pic" style="background-image:url(./images/date/yellow/main_720x780.png);">
+								<div class="cplp_info">
+									<a href="./portfolio/view.html.idx=10.html"><span class="blind">MORE</span></a>
+									<strong>VIEW</strong>
+								</div>
+							</div>
+						</div>
+				    </li>
+                 </ul>
+                       
+					 </div>
+          
+ 
+           
+<!--
+                    <div class="paging"><ul><a href="javascript:void(0);" class="on">1</a><a href="javascript:void(0);" onclick="pager(2)">2</a><a href="javascript:void(0);" onclick="pager(3)">3</a><a href="javascript:void(0);" onclick="pager(4)">4</a><a href="javascript:void(0);" onclick="pager(5)">5</a><a href="javascript:void(0);" onclick="pager(6)">6</a></ul></div>
+            
+-->
+                    <div class="paging">
+                    <ul><a href="#section1">1</a><a href="index_2p.html">2</a><a href="index_3p.html" >3</a></ul>
+                    </div>
+            
+				</div>
+			</div>
+			<div class="c_bg"></div>
+		</section>
+	</div>
+	<!-- Contents E -->
+	<hr>
+	<script>
+		get_portfolio("all");
+		var g_keyword = new Array();
+		var g_idx = "all";
+		var g_page =1;
+		var i=0;
+		var cls_count = $(".cls_keyword").length;
+		$(".cls_keyword").change(function(){
+			g_keyword = new Array();
+			$( ".cls_keyword" ).each(function( index ){
+				if($(this).is(":checked")){
+		        	g_keyword.push($(this).val());
+		        }
+			});
+	        get_portfolio(g_idx);
+	    });
+	    function pager(idx){
+	    	g_page = idx;
+	    	get_portfolio(g_idx);
+	    }
+		function get_portfolio(idx){
+			if(idx != g_idx){
+				g_idx = idx;
+			}
+			$(".cp_a").removeClass("on");
+			$("#a_"+idx).addClass("on");
+			$.ajax({
+				url: "/ajax.php",
+				type: "POST",
+				data: {
+						act: "get_portfolio",
+						idx:g_idx,
+						keyword_arr:g_keyword,
+						page:g_page
+					},
+				dataType: "json",
+				success: function(result)
+				{
+					$("#cp_ul").html(result["html"]);
+					$(".paging").html(result["pager"]);
+				}
+			});
+		}
+	</script>
+	<!-- Footer S -->
+	<footer id="footer">
+		<div class="wrap">
+			<div class="f_title">
+				<p class="ft_e">
+					<span><mark>The most important step is understanding and</mark></span><br>
+					<span><mark>Empathizing with project.</mark></span>
+				</p>
+				<p class="ft_k">
+					<span>가장 중요한 순간을 담은 포트폴리오</span>
+				</p>
+				<h2 class="ft_m">IM-PORT</h2>
+			</div>
+			<div class="f_wrap box">
+				<div class="f_info">
+					<ul>
+						<li>
+							<strong>NAME</strong>
+							<span class="cm">H.J LIM</span>
+						</li>
+						<li class="fi_address">
+							<strong>ADDRESS</strong>
+							<span>서울특별시</span>
+						</li>
+						
+						<li>
+							<strong>TEL</strong>
+							<span><a href="tel:000">000-0000-0000</a></span>
+						</li>
+						
+						<li>
+							<strong>E-MAIL</strong>
+							<span><a href="mailto:000@naver.com">000@naver.com</a></span>
+						</li>
+					</ul>
+				</div>
+				<div class="f_btn">
+					<ul>
+						<li><a href="./contact.html" class="btn big t2 arrow">REQEUST</a></li>
+						<li><a href="#profile" class="btn big arrow">PROFILE</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		
+		<hr>
+		<div class="f_copyright">
+			© 2019 <strong>IMPORT</strong>
+		</div>
+	</footer>
+	<!-- Footer E -->
+</div>
+
+<!-- 팝업, 자기소개 S -->
+<div class="popup location profile">
+	<a href="#!" class="p_close"><span class="blind">닫기</span></a>
+	<div class="p_box">
+		<div class="p_wrap">
+			<div class="p_head">
+				<h3 class="p_title">프로필</h3>
+			</div>
+			<div class="p_body">
+				<div class="p_left">
+					<img src="">
+					
+					
+				</div>
+				<div class="p_right">
+					<div class="p_info">
+						<ul>
+							<li>
+								<strong><mark>ADDRESS</mark></strong>
+								<span>서울특별시</span>
+							</li>
+							<li>
+								<strong><mark>TEL</mark></strong>
+								<span><a href="tel:000">000-0000-0000</a></span>
+							</li>
+							<li>
+								<strong><mark>학력</mark></strong>
+								<span>홍익대학교 세종 졸업</span>
+							</li>
+							<li>
+								<strong><mark>경력</mark></strong>
+								<span>
+									<span>(주)이엠넷<br>(주)명리<br>티몬<br>CJ E&M
+									</span>
+									
+								</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="#!" class="p_out"><span class="blind">닫기</span></a>
+</div>
+<!-- 팝업, 오시는 길 E 
+
+<script src="../js/lib.js"></script>
+
+<!-- AceCounter Log Gathering Script V.7.5.AMZ2019080601 -->
+<script language="javascript">
+	var _AceGID=(function(){var Inf=['gtp13.acecounter.com','8080','AH2A43490577012','AW','0','NaPm,Ncisy','ALL','0']; var _CI=(!_AceGID)?[]:_AceGID.val;var _N=0;var _T=new Image(0,0);if(_CI.join('.').indexOf(Inf[3])<0){ _T.src =( location.protocol=="https:"?"https://"+Inf[0]:"http://"+Inf[0]+":"+Inf[1]) +'/?cookie'; _CI.push(Inf);  _N=_CI.length; } return {o: _N,val:_CI}; })();
+	var _AceCounter=(function(){var G=_AceGID;var _sc=document.createElement('script');var _sm=document.getElementsByTagName('script')[0];if(G.o!=0){var _A=G.val[G.o-1];var _G=(_A[0]).substr(0,_A[0].indexOf('.'));var _C=(_A[7]!='0')?(_A[2]):_A[3];var _U=(_A[5]).replace(/\,/g,'_');_sc.src=(location.protocol.indexOf('http')==0?location.protocol:'http:')+'//cr.acecounter.com/Web/AceCounter_'+_C+'.js?gc='+_A[2]+'&py='+_A[4]+'&gd='+_G+'&gp='+_A[1]+'&up='+_U+'&rd='+(new Date().getTime());_sm.parentNode.insertBefore(_sc,_sm);return _sc.src;}})();
+</script>
+<noscript><img src='http://gtp13.acecounter.com:8080/?uid=AH2A43490577012&je=n&' border='0' width='0' height='0' alt=''></noscript>
+<!-- AceCounter Log Gathering Script End -->
+
+<!--네이버 에널리스틱스-->
+<script src="./js/lib.js"></script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "c29b8a9ae7828";
+wcs_do();
+</script>
+<!--//네이버 에널리스틱스-->
+
+
+
+</body></html>
